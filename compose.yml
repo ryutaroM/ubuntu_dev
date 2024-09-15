@@ -1,0 +1,9 @@
+services:
+  ubuntu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    volumes:
+      - ./share_data:/share_data
+    command: tail -f /dev/null
